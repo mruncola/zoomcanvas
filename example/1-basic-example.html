@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Basic Zoom Canvas Example</title>
+</head>
+
+<body>
+
+Zoom : <a href="#" onclick="zc.zoomOut();">-</a> | <a href="#" onclick="zc.zoomIn();">+</a>
+<canvas id="example1"></canvas>
+
+<script language="javascript" type="text/javascript" src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+<script language="javascript" type="text/javascript" src="../js/zoomcanvas.js"></script>
+<script>
+	var zc = new ZoomCanvas();
+	zc.debug(true);
+	
+	zc.create({
+		element: document.getElementById("example1"),
+		height: 533,
+		width: 960,
+		currentZoom: 0,
+		images: [
+		{
+			img: "map_2003-z1.jpg"
+		},
+		{
+			img: "map_2003-z2.jpg"
+		},
+		{
+			img: "map_2003-z3.jpg"
+		},
+		{
+			img: "map_2003-z4.jpg"
+		}]
+	});
+</script>
+
+</body>
+</html>
